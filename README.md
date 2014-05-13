@@ -10,7 +10,6 @@ in no time.
 * Quickly and easily edit details
 * Timeline of progress
 
-
 ## Requirements
 
 Describe the technology stack and any dependencies.
@@ -19,7 +18,7 @@ Describe the technology stack and any dependencies.
 
 ### Clone this repo
 
-    git clone git@github.com:openplans/planbox.git
+    git clone https://github.com/brecke/planbox.git
 
 ### Install dependencies
 
@@ -29,26 +28,17 @@ Describe the technology stack and any dependencies.
      pip install -r requirements.txt
      bower install
      cp src/planbox/local_settings.py.template src/planbox/local_settings.py 
+     src/manage.py syncdb
+     src/manage.py migrate
 
 ### Start your local server
 
      src/manage.py runserver
     
 
-## Deploy to Heroku
+## TODO
 
-### Create the app
-
-1. Create a Heroku app for your Hatch git repo `heroku apps:create my-app-name`
-2. Make sure you add the following Heroku Add-ons
-  * Postgresql
-  * Rediscloud (or your favorite Redis add-on)
-  * Heroku Scheduler
-
-### Next thing
-
-TBD
-
+* Remove the s3 reference for image upload
 
 ## Supported Browsers
 
